@@ -1,0 +1,208 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột */
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+
+/* MAIN CONTENT */
+
+.mainContent{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  padding: 40px;
+}
+
+/* PRODUCT CARD */
+.product{
+  background: white;
+  border-radius: 12px; /* Bo tròn đều */
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Đậm nhẹ hơn một chút */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover{
+  transform: translateY(-8px) scale(1.03); /* Di chuyển nhẹ và zoom mượt */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.18); /* Shadow rõ hơn khi hover */
+}
+
+/* IMAGE */
+.image{
+  height: 160px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; /* Thêm padding cho ảnh không sát viền */
+}
+
+/* Đảm bảo ảnh không bị biến dạng */
+.image img {
+  max-height: 140px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* TEXT */
+.name{
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px 6px;
+  line-height: 1.4;
+  min-height: 46px; /* Đều chiều cao các tên sản phẩm */
+  color: #111827; /* Đậm chữ để nổi bật hơn */
+}
+
+.price{
+  color: #ef4444;
+  font-weight: bold;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.remain{
+  padding: 5px 15px 15px 15px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* BUTTON */
+.buy{
+  width: 100%;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 12px 12px; /* Bo tròn phần dưới nút */
+}
+
+.buy:hover{
+  opacity: 0.9;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  padding: 0 15px 15px 15px;
+}
+
+.buy, .viewDetail {
+  flex: 1;
+  padding: 12px 0;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-size: 16px;
+}
+
+.buy {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+}
+
+.buy:hover {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8);
+  box-shadow: 0 8px 15px rgba(37, 99, 235, 0.4);
+  transform: translateY(-3px);
+}
+
+.viewDetail {
+  background: #f3f4f6;
+  color: #2563eb;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.15);
+}
+
+.viewDetail:hover {
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Optional: thay đổi con trỏ hover cho rõ hơn */
+.buy:hover, .viewDetail:hover {
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+
+
+
+/* Chia cột */
+.footerSection{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px 0;
+}
+
+/* Mỗi cột */
+.footerSection div{
+  width: 23%;
+  min-width: 200px;
+}
+
+/* Tiêu đề */
+.footerSection strong{
+  display: block;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* List */
+.footerSection ul{
+  padding: 0;
+}
+
+.footerSection ul li{
+  list-style: none;
+  padding: 6px 0;
+  font-size: 13px;
+  color: #d1d5db;
+  transition: 0.3s;
+}
+
+.footerSection ul li:hover{
+  color: #38bdf8;
+  transform: translateX(3px); /* 🔥 hover xịn */
+  cursor: pointer;
+}
+
+/* Logo website */
+.website{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.website li{
+  list-style: none;
+}
+
+/* Copyright */
+.copyright{
+  background: #0f172a;
+  padding: 15px;
+  font-size: 12px;
+  color: #9ca3af;
+  line-height: 1.6;
+  text-align: center; /* 🔥 căn giữa */
+}
